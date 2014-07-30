@@ -2,7 +2,7 @@ require 'rspec'
 require 'lucky_number'
 
 describe ("lucky_number") do
-  it("sums the sides of a number of even length and returns 'You are lucky' if the sum of sides is equal") do
+  it("splits a number down the center and sums each side. returns 'You are lucky' if the sum of each the sides is equal") do
     lucky_number(5234).should eq("You are lucky")
   end
 
