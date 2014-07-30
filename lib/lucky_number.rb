@@ -2,11 +2,8 @@
 def lucky_number(number)
  
   numbers = number.to_s.split('').map { |each| each.to_i  }
-  front_half = numbers[0..numbers.length/2 -1]
-  back_half = numbers[(numbers.length/2.0).ceil..-1]
-
-  front_half = front_half.inject(:+)
-  back_half = back_half.inject(:+)
+  front_half = numbers[0..numbers.length/2 -1].inject(:+)
+  back_half = numbers[(numbers.length/2.0).ceil..-1].inject(:+)
 
   if number.is_a?(Integer) == false
     "Please enter a number"
@@ -18,3 +15,4 @@ def lucky_number(number)
   end
 end
 
+p lucky_number(5673875)
